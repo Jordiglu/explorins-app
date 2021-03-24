@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order confirmation</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!--CSS styles-->
+    <style type="text/css">
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            height: auto;
+        }
+
+        .table-products {
+            padding-top: 3%;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-img {
+            margin-top: 5%;
+            max-width: 200px;
+        }
+
+        .inputName {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-left: 3%;
+        }
+
+        /* .table-products {
+            width: 100%;
+            max-width: 600px;
+        } */
+
+        .border-bottom {
+            margin-top: 20px;
+            border-bottom: 1px solid black;
+            width: 80%;
+            height: 10px;
+            margin-left: 10%;
+        }
+
+        .total-container {
+            margin-top: 4%;
+            margin-left: 40%;
+            padding-bottom: 8%;
+        }
+
+        .img-size {
+            width: 60px;
+            height: auto;
+            padding: 3%;
+            border-radius: 50%;
+        }
+
+        .orderInfo {
+            padding-top: 6%;
+            font-size: 1.1em;
+        }
+
+        .deliver-info {
+            font-size: 0.9em;
+        }
+
+        .productObject {
+            list-style-type: none;
+            font-size: 1.2em;
+        }
+
+        .socialMediaInfo {
+            text-align: center;
+            font-size: 0.7em;
+        }
+
+        .logo-size {
+            height: 16px;
+        }
+
+        .terms-condition {
+            padding-top: 4%;
+        }
+
+        /* Media Query */
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 5%;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .container {
+                margin: 5%;
+                margin-left: 15%;
+            }
+
+            .total-details {
+                padding-left: 4%;
+            }
+        }
+    </style>
+    <!--JS program-->
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <!--Logo Image-->
+        <div class="logo-container">
+            <img class="logo-img" src="logos/Logo_header.jpg " alt="Explorins Logo">
+        </div>
+        <span class="inputName" id="inputUserName"></span>
+
+        <!--Main container to add products-->
+        <div class="main-container">
+            <p class="orderInfo">Hemos recibido tu pedido de productos:</p>
+
+            <!--Add Url products-->
+
+            <div class="product-container">
+                <table cellspacing="0" cellpadding="0" border="0" class="table-products">
+                    <tr>
+                        <td width="100" height="45"><img class="img-size" src="img/pic1.jpeg" alt="Imagen 
+                                Productos"></td>
+                        <td width="200" height="45">Street Art</td>
+                        <td width="50" id="subtotal">x1</td>
+                    </tr>
+                    <tr>
+                        <td width="100" height="45"><img class="img-size" src="img/pic1.jpeg" alt="Imagen 
+                                Productos"></td>
+                        <td width="200" height="45">Street Art</td>
+                        <td width="50" id="subtotal">x1</td>
+                    </tr>
+                    <tr>
+                        <td width="100" height="45"><img class="img-size" src="img/pic1.jpeg" alt="Imagen 
+                                Productos"></td>
+                        <td width="200" height="45">Street Art</td>
+                        <td width="50" id="subtotal">x1</td>
+                    </tr>
+                    <tr>
+                        <td width="100" height="45"><img class="img-size" src="img/pic1.jpeg" alt="Imagen 
+                                Productos"></td>
+                        <td width="200" height="45">Street Art</td>
+                        <td width="50" id="subtotal">x1</td>
+                    </tr>
+                </table>
+
+                <div class="border-bottom"></div>
+                <!--Total price table-->
+
+                <div class="total-container">
+                    <table cellspacing="0" cellpadding="0" border="0" class="table-products">
+                        <tr>
+                            <td width="" height="45">Subtotal</td>
+                            <td width="50" id="subtotal">$70</td>
+                        </tr>
+                        <tr>
+                            <td width="100" height="45">IVA 21%</td>
+                            <td width="50" id="iva-total">$34</td>
+                        </tr>
+                        <tr>
+                            <td width="100" height="45">TOTAL</td>
+                            <td width="50" id="totalPrice">$150</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!--Div to add Order number-->
+                <div class="orderInfo">
+                    <span id="orderNumber">[Numero pedido]</span>
+                </div>
+                <p class="orderInfo">del MarketBoutique</p>
+                <section class="deliver-info">
+                    <p class="">La fecha estimada de entrega
+                        es<span id="variableFecha">[variableFecha]</span>.<span
+                            id="variableVendedor">[variableVendedor]</span>se pondra en
+                        contacto contigo cuando el pedido sea enviado.</p>
+                    <p class="">Si tienes cualquier problema puedes contactar con nosotros
+                        <a href="#">support@explorins.com</a>
+                    </p>
+                </section>
+            </div>
+            <footer class="socialMediaInfo">
+                <p class="">Te invitamos a descrubrir muchísimos más storytellings en la App!</p>
+                <div class="row">
+                    <a href="https://apps.apple.com/es/app/explorins/id1489321533">
+                        <img class="logo-size" src="logos/AS_icon.png" alt="Logo Apple"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.explorins"><img class="logo-size"
+                            src="logos/GP_icon.png" alt="Logo GooglePlay"></a>
+                </div>
+                <p class="">Y puedes seguir nuestras redes y dejarnos tus comentarios en nuestras redes :)</p>
+                <div class="row">
+                    <a href="https://www.instagram.com/explorins/"><img class="logo-size" src="logos/IG_morado.png"
+                            alt="Instagram Icon"></a>
+                    <a href="https://www.facebook.com/eXplorins/"><img class="logo-size" src="logos/FB_morado.png"
+                            alt="Facebook Icon"></a>
+                </div>
+                <div class="terms-condition">
+                    <a href="http://legal.explorins.com/terminos-creadores">Terminos & Condiciones</a>
+                    <p class="copyright"> © 2021 Copyright by eXplorins PMW SL. All rights reserved </p>
+                </div>
+            </footer>
+        </div>
+</body>
+
+</html>
